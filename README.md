@@ -44,24 +44,6 @@ Criar um modelo preditivo capaz de estimar a quantidade de estoque com base em v
 
 - Foram realizadas previsões com base em novos dados.
 - Os resultados foram exportados e analisados.
-- [Adicione aqui prints ou gráficos, se desejar.]
-
----
-
-### 📁 Arquivos Importantes
-
-- `dataset-1000-com-preco-promocional-e-renovacao-estoque.csv`: Dataset original usado no treinamento
-- `previsoes.csv`: Resultados das previsões exportadas
-- `imagens/`: Prints das telas do SageMaker Canvas (gráficos, métricas, etc.)
-
----
-
-### 🚀 Como Reproduzir
-
-1. Faça o fork deste repositório.
-2. Acesse o Amazon SageMaker Canvas com sua conta AWS.
-3. Importe o dataset e siga os passos descritos acima.
-4. Analise os resultados e compare com os seus.
 
 ---
 
@@ -76,8 +58,8 @@ Criar um modelo preditivo capaz de estimar a quantidade de estoque com base em v
 ### 👨‍💻 Autora
 
 - **Amanda Rezende Chaves**
-- [LinkedIn - Amanda Rezende Chaves]([https://linkedin.com/in/seuusuario](https://www.linkedin.com/in/amanda-rezende-chaves-6927201bb/))
-- [GitHub - AmandaRez]([https://github.com/seuusuario](https://github.com/AmandaRez))
+- [LinkedIn - Amanda Rezende Chaves](https://www.linkedin.com/in/amanda-rezende-chaves-6927201bb/)
+- [GitHub - AmandaRez](https://github.com/AmandaRez)
 
 ---
 
@@ -102,12 +84,12 @@ Essas são as variáveis que mais impactam o valor previsto para `QUANTIDADE_EST
    → O preço tem um impacto moderado. Pode indicar que produtos mais caros ou mais baratos têm padrões de estoque diferentes.
 4. **FLAG_PROMOCAO** – 1,03%  
    → Promoções têm pouco impacto neste modelo, talvez porque não há muitos dados com promoções ou o efeito delas é pequeno.
-
-![Análise Geral e Impacto das Colunas](imagens/imagem1.png)
-
 ---
 
 ### 📈 **Gráfico: Impacto da DATA_EVENTO**
+
+![Análise Geral e Impacto das Colunas](imagens/imagem1.png)
+
 - O gráfico mostra como diferentes datas influenciam a previsão da quantidade de estoque.
 - Isso ajuda a entender se há sazonalidade (ex: mais estoque em dezembro, menos em janeiro, etc.).
 
@@ -116,11 +98,14 @@ Essas são as variáveis que mais impactam o valor previsto para `QUANTIDADE_EST
 ### 📉 **Análise de Precisão: Predito vs. Real**
 
 #### 📌 Gráfico: Predicted vs. Actual
+
+![Gráfico Predito vs Real](imagens/imagem2.png)
+
 - O gráfico mostra a comparação entre os valores **previstos** e os **valores reais** da coluna `QUANTIDADE_ESTOQUE`.
 - Cada ponto azul representa uma previsão feita pelo modelo.
 - O ideal é que os pontos estejam próximos da linha diagonal (onde previsto = real), o que indicaria alta precisão.
 
-![Gráfico Predito vs Real](imagens/imagem2.png)
+
 
 #### 📏 Faixa de Erro (RMSE)
 - O modelo tem um erro médio de **±26.756 unidades**.
@@ -143,12 +128,13 @@ Essas são as variáveis que mais impactam o valor previsto para `QUANTIDADE_EST
 - **MAPE (Erro Percentual Absoluto Médio)**: *Não disponível*
 
 #### 📉 Gráfico de Resíduos
+
+![Métricas Detalhadas e Gráfico de Resíduos](imagens/imagem3.png)
+
 - Mostra a diferença entre os valores previstos e os reais.
 - Os pontos azuis representam os resíduos.
 - As linhas roxas indicam o MAE.
 - Idealmente, os resíduos devem estar distribuídos de forma aleatória em torno de zero — isso indicaria que o modelo não está cometendo erros sistemáticos.
-
-![Métricas Detalhadas e Gráfico de Resíduos](imagens/imagem3.png)
 
 ---
 
