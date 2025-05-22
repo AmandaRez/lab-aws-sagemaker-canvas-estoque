@@ -103,6 +103,8 @@ Essas são as variáveis que mais impactam o valor previsto para `QUANTIDADE_EST
 4. **FLAG_PROMOCAO** – 1,03%  
    → Promoções têm pouco impacto neste modelo, talvez porque não há muitos dados com promoções ou o efeito delas é pequeno.
 
+!IMAGEM 1
+
 ---
 
 ### 📈 **Gráfico: Impacto da DATA_EVENTO**
@@ -117,6 +119,8 @@ Essas são as variáveis que mais impactam o valor previsto para `QUANTIDADE_EST
 - O gráfico mostra a comparação entre os valores **previstos** e os **valores reais** da coluna `QUANTIDADE_ESTOQUE`.
 - Cada ponto azul representa uma previsão feita pelo modelo.
 - O ideal é que os pontos estejam próximos da linha diagonal (onde previsto = real), o que indicaria alta precisão.
+
+! IMAGEM 2 
 
 #### 📏 Faixa de Erro (RMSE)
 - O modelo tem um erro médio de **±26.756 unidades**.
@@ -143,6 +147,8 @@ Essas são as variáveis que mais impactam o valor previsto para `QUANTIDADE_EST
 - Os pontos azuis representam os resíduos.
 - As linhas roxas indicam o MAE.
 - Idealmente, os resíduos devem estar distribuídos de forma aleatória em torno de zero — isso indicaria que o modelo não está cometendo erros sistemáticos.
+
+!Gráfico de Resíduos e Métricas Detalhadas
 
 ---
 
